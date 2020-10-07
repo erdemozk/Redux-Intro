@@ -1,15 +1,21 @@
-import * as actionTypes from "../actions/actionTypes";
+import { 
+    INCREASE_COUNTER,
+    DECREASE_COUNTER,
+    INCREASE_BY_TWO_COUNTER
+} from "../actions/actionTypes";
 
-const counterReducer = (state = 0, action) => {
+const initialState = 0
+
+const counterReducer = (state = initialState, action) => {
     let newState;
     switch (action.type) {
-        case actionTypes.INCREASE_COUNTER:
+        case INCREASE_COUNTER:
             return (newState = state + action.payload);
         
-            case actionTypes.DECREASE_COUNTER:
+        case DECREASE_COUNTER:
             return (newState = state - action.payload);
         
-            case actionTypes.INCREASE_BY_TWO_COUNTER:
+        case INCREASE_BY_TWO_COUNTER:
             return (newState = state + action.payload);
     
         default:
