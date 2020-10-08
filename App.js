@@ -1,25 +1,10 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
+import Home from "./src/screens/Home";
 
-const App = () => {
-  return (
-    <SafeAreaView>
-      <Text>
-        Selam
-      </Text>
-    </SafeAreaView>
-  );
-};
-
-const styles = StyleSheet.create({
-
+const App = createStackNavigator({
+  Home: Home,
 });
 
-export default App;
+export default createAppContainer(App);
